@@ -1,0 +1,39 @@
+### Get all tasks
+GET http://localhost:5225/api/tasks
+Accept: application/json
+
+###
+
+### Get a specific task by ID
+GET http://localhost:5225/api/tasks/1
+Accept: application/json
+
+###
+
+### Create a new task
+POST http://localhost:5225/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Finish final project",
+  "description": "Complete the tech trends final",
+  "completed": false
+}
+
+###
+
+### Update an existing task
+PUT http://localhost:5225/api/tasks/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Finish final project (updated)",
+  "description": "Updated description",
+  "completed": true
+}
+
+###
+
+### Delete a task
+DELETE http://localhost:5225/api/tasks/1
